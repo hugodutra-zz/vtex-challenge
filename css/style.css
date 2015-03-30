@@ -1,0 +1,11 @@
+.form-ok {
+	color: green;
+	display: none;
+}
+
+.form-wrong {
+	color: red;
+	font-weight: bold;
+	font-family: sans-serif;
+	display: none;
+}
