@@ -48,17 +48,13 @@ function renderSmartInput(object) {
 
 
 			if(maskRule[$('input').val().length] == 'letter') {
-					console.log('ae letter')
 				if(key > 96 && key < 128 || key > 64 && key < 91 ) {
 					return 1;
 				}else {
-					console.log('noa letter')
 					event.preventDefault();
 				}
 			} else if (maskRule[$('input').val().length] == 'number') {
 				if(key < 48 || key > 57) {
-					console.log('noa num')
-					console.log(key)
 					event.preventDefault();
 				}
 			} else if (maskRule[$('input').val().length] == 'symbol') {
@@ -104,7 +100,6 @@ function renderSmartInput(object) {
 
 						$('input').keyup(function(event){
 							var newValue = $('input').val().concat(mask.charAt(mask.length-1));
-							console.log(mask.charAt(mask.length-1))
 							$('input').val(newValue);
 							$('input').unbind('keyup');
 						});
@@ -120,7 +115,6 @@ function renderSmartInput(object) {
 						$('input').keyup(function(event){
 							
 							var newValue = $('input').val().concat(mask.charAt(mask.length-1));
-							console.log(mask.charAt(mask.length-1))
 							$('input').val(newValue);
 							$('input').unbind('keyup');
 
